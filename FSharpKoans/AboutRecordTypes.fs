@@ -20,19 +20,19 @@ module ``about record types`` =
     let RecordsHaveProperties() =
         let mario = { Name = "Mario"; Occupation = "Plumber"; }
 
-        AssertEquality mario.Name __
-        AssertEquality mario.Occupation __
+        AssertEquality mario.Name "Mario"
+        AssertEquality mario.Occupation "Plumber"
 
     [<Koan>]
     let CreatingFromAnExistingRecord() =
         let mario = { Name = "Mario"; Occupation = "Plumber"; }
         let luigi = { mario with Name = "Luigi"; }
 
-        AssertEquality mario.Name __
-        AssertEquality mario.Occupation __
+        AssertEquality mario.Name "Mario"
+        AssertEquality mario.Occupation "Plumber"
 
-        AssertEquality luigi.Name __
-        AssertEquality luigi.Occupation __
+        AssertEquality luigi.Name "Luigi"
+        AssertEquality luigi.Occupation "Plumber"
 
     [<Koan>]
     let ComparingRecords() =
